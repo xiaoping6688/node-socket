@@ -1,0 +1,27 @@
+{
+  "name": "node-socket",
+  "version": "1.0.0",
+  "description": "TCP Socket with TLV packet （Node端基于TLV二进制协议格式进行封装的socket工具库，包括粘包断包处理）",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xiaoping6688/node-socket.git"
+  },
+  "keywords": [
+    "node",
+    "socket",
+    "tlv"
+  ],
+  "author": {
+    "email": "super_xp@126.com",
+    "name": "Shawn"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/xiaoping6688/node-socket/issues"
+  },
+  "homepage": "https://github.com/xiaoping6688/node-socket#readme"
+}
