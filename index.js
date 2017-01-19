@@ -110,7 +110,7 @@ function send(cmd, arg){
       client.write(bodyBuf);
     }
   } else {
-    debuger("socket 未连接");
+    debuger("socket has not yet connected");
   }
 }
 
