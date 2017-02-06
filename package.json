@@ -1,6 +1,6 @@
 {
   "name": "node-socket",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "TCP Socket with TLV packet （Node端基于TLV二进制协议格式进行封装的socket工具库，包括粘包断包处理）",
   "main": "index.js",
   "scripts": {
