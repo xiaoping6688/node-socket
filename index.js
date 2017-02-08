@@ -53,7 +53,7 @@ function connect(port, host, onConnected, onReceived, onClosed){
 
     client.on('timeout', function() {
       debuger('The socket times out.');
-      //setTimeout(reconnect, 1000);
+      setTimeout(reconnect, 1000);
     });
   });
 
@@ -66,7 +66,7 @@ function connect(port, host, onConnected, onReceived, onClosed){
     debuger('The socket closed.');
   });
 
-  //client.setTimeout(15000);
+  client.setTimeout(15000);
 }
 
 function reconnect(){
@@ -93,17 +93,19 @@ function send(cmd, arg){
       len = Buffer.byteLength(data);
     }
 
-    //写入1个字节的tag
+    // TLV pack
+
+    // Write the tag: use one byte
     var tagBuf = new Buffer(1);
     tagBuf.writeInt8(cmd, 0);
     client.write(tagBuf);
 
-    //写入4个字节的length
+    // Write the length of value: use four bytes
     var headBuf = new Buffer(4);
     headBuf.writeUInt32BE(len, 0);
     client.write(headBuf);
 
-    //写入value
+    // Then, write the value
     if (len > 0){
       var bodyBuf = new Buffer(len);
       bodyBuf.write(data);
