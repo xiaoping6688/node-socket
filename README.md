@@ -1,5 +1,5 @@
 # node-socket for client
-Based on node.js tcp socket with TLV package structure （Node端基于TLV二进制协议格式进行封装的socket工具库，包括粘包断包处理）
+Based on node.js tcp socket of TLV package structure （Node端基于TLV二进制协议格式进行封装的socket工具库，包括粘包断包处理）
 
 
 ## Install
