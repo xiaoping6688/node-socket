@@ -1,10 +1,11 @@
 {
   "name": "node-socket",
-  "version": "1.0.2",
-  "description": "TCP Socket with TLV packet （Node端基于TLV二进制协议格式进行封装的socket工具库，包括粘包断包处理）",
+  "version": "2.0.0",
+  "description": "Based on node.js tcp socket of TLV package structure",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "server": "node test_server.js",
+    "client": "node test_client.js"
   },
   "repository": {
     "type": "git",
@@ -13,7 +14,8 @@
   "keywords": [
     "node",
     "socket",
-    "tlv"
+    "tlv",
+    "tcp"
   ],
   "author": {
     "email": "super_xp@126.com",

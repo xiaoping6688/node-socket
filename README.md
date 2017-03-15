@@ -1,5 +1,5 @@
-# node-socket for client
-Based on node.js tcp socket of TLV package structure （Node端基于TLV二进制协议格式进行封装的socket工具库，包括粘包断包处理）
+# node-socket
+Based on node.js tcp socket of TLV packet structure （Node端基于TLV二进制协议格式进行封装的socket工具库，包括粘包断包处理）
 
 
 ## Install
@@ -12,8 +12,44 @@ $ npm install --save node-socket
 ## Usage
 
 ```js
-const socket = require('node-socket')
-socket.connect(port, host, onConnected, onReceived, onClosed)
+// for client
+const socket = require('node-socket').client
+socket.connect(options, onConnected, onReceived)
 
-//=> @see example.js
+function onReceived (tag, value) {
+  switch (tag){
+    case TAG_FROM_REGIST_SUCCESS:
+
+      // send message to server
+      socket.send(1, { token: '123' })
+
+      break;
+    case TAG_FROM_REGIST_FAIL:
+
+      break;
+  }
+}
+
+
+// for server
+const server = require('node-socket').server
+
+var options = {
+  port: 11000,
+  timeout: 15000,
+  heartbeatTag: 0,
+  heartbeatInterval: 7000,
+  recreateInterval: 1000
+}
+
+server.listen(options, onClientConnected, onClientDisconncted, onClientReceived)
+
+function onClientReceived (tag, value, from) {
+  // server.broadcast(tag, value) // all
+  server.broadcast(tag, value, null, from) // all, except from
+  // server.broadcast(tag, value, clientList, from);
+}
+
+//=> @see test_server.js
+//=> @see test_client.js
 ```
