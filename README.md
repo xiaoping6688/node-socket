@@ -1,6 +1,9 @@
 # node-socket
-Based on node.js tcp socket of TLV packet structure （Node端基于TLV二进制协议格式进行封装的socket工具库，包括粘包断包处理）
+>Based on node.js tcp socket of TLV packet structure （Node端基于TLV二进制协议格式进行封装的socket工具库，包括粘包断包处理）
 
+其他相关
+- [mqtt-socket](https://github.com/xiaoping6688/mqtt-socket)：Eclipse Paho MQTT Client 封装，实现重连、队列和日志功能等
+- [easemob-webim-socket](https://github.com/xiaoping6688/easemob-webim-socket)：环信WEBIM实时通信封装 + 客户端模拟器（electron）
 
 ## Install
 
