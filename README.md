@@ -1,5 +1,8 @@
 # node-socket
 >Based on node.js tcp socket of TLV packet structure （Node端基于TLV二进制协议格式进行封装的socket工具库，包括粘包断包处理）
+[![npm package](https://img.shields.io/npm/v/node-socket.svg?style=flat-square)](https://www.npmjs.org/package/node-socket)
+[![NPM downloads](http://img.shields.io/npm/dm/node-socket.svg?style=flat-square)](https://npmjs.org/package/node-socket)
+[![Percentage of issues still open](http://isitmaintained.com/badge/open/xiaoping6688/node-socket.svg)](http://isitmaintained.com/badge/open/xiaoping6688/node-socket "Percentage of issues still open")
 
 其他相关
 - [mqtt-socket](https://github.com/xiaoping6688/mqtt-socket)：Eclipse Paho MQTT Client 封装，实现重连、队列和日志功能等
